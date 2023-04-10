@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh | bash
 
 cd ~/.config
 
@@ -10,5 +10,9 @@ cd lvim
 
 lvim
 
-sed -i "s/layout_strategy = nil/layout_strategy = \'horizontal\'/g" test/builtin
-sed -i 's/layout_config = ..,/layout_config = \{ horizontal = \{ width = 0.9, height = 0.8 \} \},/g' test/builtin
+cd ~/.local/share/lunarvim/lvim/lua/lvim/core/
+
+sed -i "s/layout_strategy = nil/layout_strategy = \'horizontal\'/g" telescope.lua
+sed -i 's/layout_config = ..,/layout_config = \{ horizontal = \{ width = 0.9, height = 0.8 \} \},/g' telescope.lua
+
+cd
