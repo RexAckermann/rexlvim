@@ -4,13 +4,12 @@
 
 cd ~/.config
 mv -fv lvim lvim.beforerexlvim
-git clone https://github.com/RexAckermann/rexlvim.git lvim
+git clone https://github.com/RexAckermann/rexlvim.git lvim && echo "Config Downloaded"
 cd lvim
 lvim
 
 cd ~/.local/share/lunarvim/lvim/lua/lvim/core/
 
-sed -i "s/layout_strategy = nil/layout_strategy = \'horizontal\'/g" telescope.lua
-sed -i 's/layout_config = ..,/layout_config = \{ horizontal = \{ width = 0.9, height = 0.8 \} \},/g' telescope.lua
+sed -i "s/layout_strategy = nil/layout_strategy = \'horizontal\'/g" telescope.lua && sed -i 's/layout_config = ..,/layout_config = \{ horizontal = \{ width = 0.9, height = 0.8 \} \},/g' telescope.lua && echo "Telescope config modded"
 
 cd
