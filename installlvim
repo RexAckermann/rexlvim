@@ -4,7 +4,7 @@
 
 cd ~/.config
 
-git clone https://github.com/RexAckermann/rexlvim.git
+git clone https://github.com/RexAckermann/rexlvim.git lvim
 
 cd lvim
 
