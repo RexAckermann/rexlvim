@@ -5,10 +5,12 @@
 cd ~/.config
 mv -fv lvim lvim.beforerexlvim.$(date +%s)
 git clone https://github.com/RexAckermann/rexlvim.git lvim && echo "Config Downloaded"
-lvim && echo hi
 
-cd ~/.local/share/lunarvim/lvim/lua/lvim/core/
-
-sed -i "s/layout_strategy = nil/layout_strategy = \'horizontal\'/g" telescope.lua && sed -i 's/layout_config = ..,/layout_config = \{ horizontal = \{ width = 0.9, height = 0.8 \} \},/g' telescope.lua && echo "Telescope config modded"
-
-cd
+echo "#!/bin/env bash" > .c.sh &&
+echo "cd ~/.local/share/lunarvim/lvim/lua/lvim/core/ && sed -i "s/layout_strategy = nil/layout_strategy = \'horizontal\'/g" telescope.lua && sed -i 's/layout_config = ..,/layout_config = \{ horizontal = \{ width = 0.9, height = 0.8 \} \},/g' telescope.lua && echo "Telescope config modded" && cd" > .c.sh &&
+lvim .c.sh &&
+echo Executuing: &&
+cat .c.sh &&
+echo "If you are sure Press Enter otherwise Press Ctrl-c" &&
+read &&
+cat .c.sh | zsh
