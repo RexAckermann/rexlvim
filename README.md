@@ -1,0 +1,2 @@
+# rexlvim
+My Lunarvim conf
