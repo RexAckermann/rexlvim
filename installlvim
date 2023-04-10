@@ -6,7 +6,7 @@ cd ~/.config
 mv -fv lvim lvim.beforerexlvim.$(date +%s)
 git clone https://github.com/RexAckermann/rexlvim.git lvim && echo "Config Downloaded"
 cd lvim
-lvim ;
+lvim &&
 
 cd ~/.local/share/lunarvim/lvim/lua/lvim/core/
 
