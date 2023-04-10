@@ -3,11 +3,9 @@
 #curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh | bash
 
 cd ~/.config
-
+mv -fv lvim lvim.beforerexlvim
 git clone https://github.com/RexAckermann/rexlvim.git lvim
-
 cd lvim
-
 lvim
 
 cd ~/.local/share/lunarvim/lvim/lua/lvim/core/
