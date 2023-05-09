@@ -368,12 +368,15 @@ lvim.plugins = {
           "https://github.com/khaveesh/vim-fish-syntax",
           -- 'jose-elias-alvarez/null-lsnvim',
           'MunifTanjim/prettier.nvim',
+          "jackMort/ChatGPT.nvim",
+          "MunifTanjim/nui.nvim",
 
      },
 }
 
 -- Plugins stuff
 require("telescope").load_extension "file_browser"
+require("chatgpt").setup()
 require "lsp_signature".setup('cfg')
 require 'colorizer'.setup()
 require 'sniprun'.setup({
@@ -844,4 +847,3 @@ vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]] -- autoformat 
 --   end,
 -- })
 -- require('telescope.builtin').find_files({layout_strategy='horizontal',layout_config={width=0.9,height=0.9}})
-
