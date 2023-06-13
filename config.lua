@@ -316,7 +316,7 @@ lvim.plugins = {
           "OmniSharp/omnisharp-vim",
           "ervandew/supertab",
           -- "garbas/vim-snipmate",
-          "marcweber/vim-addon-mw-utils",
+          -- "marcweber/vim-addon-mw-utils",
           "tomtom/tlib_vim",
           "lambdalisue/suda.vim",
           "nvim-neo-tree/neo-tree.nvim",
@@ -350,13 +350,13 @@ lvim.plugins = {
           "https://github.com/theHamsta/nvim-dap-virtual-text",
           "https://github.com/nvim-telescope/telescope-dap.nvim",
           "SirVer/ultisnips",
-          "honza/vim-snippets",
+          -- "honza/vim-snippets",
           "hrsh7th/cmp-cmdline",
-          "hrsh7th/cmp-calc",
-          "f3fora/cmp-spell",
-          "tamago324/cmp-zsh",
-          "quangnguyen30192/cmp-nvim-ultisnips",
-          "hrsh7th/cmp-nvim-lsp-signature-help",
+          -- "hrsh7th/cmp-calc",
+          -- "f3fora/cmp-spell",
+          -- "tamago324/cmp-zsh",
+          -- "quangnguyen30192/cmp-nvim-ultisnips",
+          -- "hrsh7th/cmp-nvim-lsp-signature-help",
           "https://github.com/tpope/vim-surround",
           "https://github.com/michaelb/sniprun",
           "https://github.com/rcarriga/nvim-notify",
@@ -368,15 +368,12 @@ lvim.plugins = {
           "https://github.com/khaveesh/vim-fish-syntax",
           -- 'jose-elias-alvarez/null-lsnvim',
           'MunifTanjim/prettier.nvim',
-          "jackMort/ChatGPT.nvim",
-          "MunifTanjim/nui.nvim",
 
      },
 }
 
 -- Plugins stuff
 require("telescope").load_extension "file_browser"
-require("chatgpt").setup()
 require "lsp_signature".setup('cfg')
 require 'colorizer'.setup()
 require 'sniprun'.setup({
@@ -827,7 +824,6 @@ lvim.builtin.which_key.mappings["k"] = {
 
 vim.cmd('source ~/.config/lvim/lua/plugins/evilline.lua')
 vim.cmd('source ~/.config/lvim/lua/plugins/null-ls.lua')
-vim.cmd('source ~/.config/lvim/lua/plugins/telescope.lua')
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]] -- autoformat on save
 
 -- require("plugins.telescope")
@@ -846,4 +842,3 @@ vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]] -- autoformat 
 --     require("nvim-treesitter.highlight",.attach(0, "bash",
 --   end,
 -- })
--- require('telescope.builtin').find_files({layout_strategy='horizontal',layout_config={width=0.9,height=0.9}})
